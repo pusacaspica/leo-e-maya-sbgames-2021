@@ -9,6 +9,7 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage[show]{ed}
+\usepackage{tabularx}
 
 %comandos para o meu comentário
 \newcommand{\xexeo}[1]{\ednote{\textcolor{red}{Xexéo - #1}}}
@@ -18,6 +19,8 @@
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+    
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
     
 \begin{document}
 
@@ -75,20 +78,47 @@ O jogo educativo exógeno é, por natureza, mais fácil de ser feito e executado
 
 Por outro lado, o jogo educativo endógeno possui necessariamente uma ligação entre o \textit{game design} e o conteúdo a ser passado. Sua maior característica é fazer com que o domínio do jogo venha agregado ao domínio do próprio conteúdo, como por exemplo em jogos de estratégia históricos como as séries Civilization e Rise of Nations\cite{b14}.
 
-\subsection{Jogos "de programação"}
+Jogos educativos endógenos são presentes em lojas virtuais de jogos eletrônicos, abordando vários temas. Um desses temas é a programação de soluções na forma de algoritmos em ambientes simulados\cite{b15}\cite{b16}\cite{b17}. A existência de outros jogos que abordam conteúdos similares a Léo \& Maya é excelente, uma vez que prova a existência de um mercado para esse tipo de jogo e informa uma coleção de convenções e ideias sobre as quais o nosso jogo pode construir.
 
-Em lojas virtuais de jogos, uma categoria presente de jogos são \textit{puzzle games} sobre programar soluções em ambientes simulados\cite{b15}\cite{b16}, vindo a serem categorizados como ``\textit{programming games}'' dependendo da plataforma\cite{b17}. A existência de outros jogos que abordam temas similares a Léo \& Maya é excelente, uma vez que prova a existência de um mercado para esse tipo de jogo e informa uma coleção de convenções e ideias sobre as quais o nosso jogo pode construir.
-
-Todos os jogos contemplados dentro dessas categorias funcionam de forma suficientemente similar. Normalmente, eles são divididos em fases, e cada fase dá um problema a ser resolvido para o qual o jogador declara um algoritmo que solucione o problema proposto, cada jogo propondo uma forma de declaração de instrução diferente.
-
-Um exemplo de jogo que se encaixa nesta categoria é o Human Resource Machine\cite{b18}, um jogo que ensina lógica de programação através de várias fases onde o jogador escreve algoritmos enfileirando blocos que significam instruções simples que lembram \textit{Assembly} de modo a concluir objetivos. Human Resource Machine serviu de inspiração não só como prova de que esse tipo de jogo era viável e tem um público, mas também como prova de que jogos sobre montar algoritmos eram possíveis em celulares.
+Léo \& Maya tira grande inspiração de Human Resource Machine\cite{b18}, uma vez que ambos são jogos que podem ser jogados em celulares e computadores e se baseiam em fazer o jogador programar algoritmos para resolver problemas que são divididos em fases. Contudo, Léo \& Maya se diferencia da maioria abordando paralelismo desde as primeiras fases e algoritmos através de uma sintaxe simplificada.
 
 \section{Projeto do Jogo Educativo}
-Antes do desenvolvimento do jogo, criou-se um \textit{game design canvas} baseado no Game Design Canvas para jogos endógenos (Endo-GDC) de modo a ``facilitar a discussão e descrição de um jogo sério''\cite{b19}. O canvas é útil para unificar a linguagem usada por todas as partes envolvidas na produção do \textit{game} e descrever de forma explícita e legível a relação entre o conteúdo que se quer passar, os objetivos pedagógicos que querem ser atingidos através do conteúdo e as mecânicas do jogo que deverão ter ligação direta com os objetivos. Todo o conteúdo desse canvas foi, num momento posterior, traduzido em um documento de\textit{game design}.
+Antes do desenvolvimento do jogo, criou-se um \textit{game design canvas} baseado no Game Design Canvas para jogos endógenos (Endo-GDC) de modo a ``facilitar a discussão e descrição de um jogo sério''\cite{b19}. O canvas é útil para unificar a linguagem usada por todas as partes envolvidas na produção do \textit{game} e descrever de forma explícita e legível a relação entre o conteúdo que se quer passar, os objetivos pedagógicos que querem ser atingidos através do conteúdo e as mecânicas do jogo que deverão ter ligação direta com os objetivos. Todo o conteúdo desse canvas foi, num momento posterior, traduzido em um documento de\textit{game design}. 
 
-No que diz respeito aos aspectos técnicos, utilizou-se a Unity\cite{b20} para construir o jogo. A Unity é um motor de jogos gratuito estabelecido no mercado que permite a criação de aplicações com recursos gráficos tanto em 2D quanto 3D, e que possui um foco no mercado de desenvolvimento de jogos eletrônicos. Atualmente, a Unity utiliza C\#\cite{b21} como a linguagem para escrever \textit{scripts} dentro dos projetos, e permite a exportação dos seus projetos para, dentre outras plataformas, computadores pessoais e celulares Android. Contudo, toda a arte do jogo foi produzida usando o aplicativo pago Aseprite\cite{b22}.
+A relação entre objetivos pedagógicos e mecânicas é resumida na tabela 1, onde cada linha da tabela corresponde a uma mecânica do jogo e cada coluna corresponde a um objetivo pedagógico. Cada célula da tabela marcada com um ``X'' representa a relação entre uma mecânica e um objetivo pedagógico específicos, podendo assim uma mecânica ter relação com mais de um objetivo pedagógico ao mesmo tempo.
 
-O conteúdo pedagógico que o jogo visa abordar está alinhado com currículos de cursos de programação ao redor do mundo\cite{b8}\cite{b23}, introduzindo conteúdos pontuais desses mesmos currículos na ordem em que eles aparecem nos planos de aulas. A diferença é a introdução de paralelismo por parte do jogo, conteúdo que não aparece em nenhum dos currículos consultados. Através dos conteúdos pedagógicos, o jogo visa exercitar a construção de algoritmos e a divisão de problemas complexos em subproblemas simples de solução conhecida, dois dos quatro pilares fundamentais de PC\cite{b6}.
+\begin{table}[htbp]
+\caption{Relação entre objetivos de aprendizado e mecânicas do jogo ``Léo \& Maya''}
+\begin{center}
+\begin{tabularx}{9.75cm}{|Y|Y|Y|Y|Y|}
+\hline
+\textbf{ }&\textbf{Reconhecer}&\textbf{Interpretar}&\textbf{Analisar}&\textbf{Conceber} \\
+\textbf{ }&\textbf{subproblemas}&\textbf{objetivo}&\textbf{limitações}&\textbf{algoritmos} \\
+\hline
+\textbf{Trilha de instruções de tamanho finito} & & & & X  \\
+\hline
+\textbf{Andar pelo mapa} & & X & X & X \\
+\hline
+\textbf{Empurrar objetos} & & & X & X\\
+\hline
+\textbf{Pegar ou largar objetos} & & X & X & X\\
+\hline
+\textbf{Árvores} & & & X & X\\
+\hline
+\textbf{Laços de instruções} & X & & X & X\\
+\hline
+\textbf{Dois personagens jogáveis} & X & X & X & X\\
+\hline
+\textbf{Barreiras} & X & & X & X\\
+\hline
+\end{tabularx}
+\label{tab1}
+\end{center}
+\end{table}
+
+O conteúdo pedagógico que o jogo visa abordar está alinhado com currículos de cursos de programação ao redor do mundo\cite{b8}\cite{b20}, introduzindo conteúdos pontuais desses mesmos currículos na ordem em que eles aparecem nos planos de aulas. A diferença é a introdução de paralelismo por parte do jogo, conteúdo que não aparece em nenhum dos currículos consultados. Através dos conteúdos pedagógicos, o jogo visa exercitar a construção de algoritmos e a divisão de problemas complexos em subproblemas simples de solução conhecida, dois dos quatro pilares fundamentais de PC\cite{b6}.
+
+No que diz respeito aos aspectos técnicos, utilizou-se a Unity\cite{b21} para construir o jogo. A Unity é um motor de jogos gratuito estabelecido no mercado que permite a criação de aplicações com recursos gráficos tanto em 2D quanto 3D, e que possui um foco no mercado de desenvolvimento de jogos eletrônicos. Atualmente, a Unity utiliza C\#\cite{b22} como a linguagem para escrever \textit{scripts} dentro dos projetos, e permite a exportação dos seus projetos para, dentre outras plataformas, computadores pessoais e celulares Android. Contudo, toda a arte do jogo foi produzida usando o aplicativo pago Aseprite\cite{b23}.
 
 O jogo possui um total de vinte e duas fases divididas em seis seções que introduzem mecânicas e conteúdos diferentes. As fases do jogo funcionam todas praticamente da mesma forma, de modo a manter a consistência na interação do jogador com as mecânicas do jogo e não exigir que o jogador reaprenda a jogar a cada fase. Caso a fase seja a primeira de algum conjunto de fases e o jogador estiver jogando a fase pela primeira vez, um vídeo demonstra através de um exemplo a mecânica nova que o conjunto de fases introduz.
 
@@ -101,26 +131,22 @@ Independente de qual for a fase dentro do seu grupo de fases, todas as fases se 
 \end{figure}
 
 Assim que o jogador se der por satisfeito com a solução concebida, o jogador deve apertar no botão ``pronto'' presente na figura acima para dar continuidade. Se o jogo não tiver sido introduzido a laços de instruções, o jogador será levado diretamente para a execução do algoritmo. Caso contrário, o jogador terá a liberdade de definir laços de instruções com um número finito de repetições. Nesta tela, o jogador também tem toda a liberdade de retornar para a tela anterior e fazer algum ajuste às instruções presentes na trilha e voltar a ela.
-\begin{figure}[htbp]
-\centerline{\includegraphics[scale=0.275]{images/fig02.jpg}}
-\caption{Tela de declaração de laços de insturções da fase 5-1.}
-\label{fig}
-\end{figure}
 
 Uma vez que o algoritmo for executado, o jogo rodará por todas as instruções até que um dos dois cenários ocorram: ou o personagem cumpre o objetivo proposto pela fase seguindo o algoritmo concebido pelo jogador, ou o jogador fornecerá ao personagem um algoritmo incapaz de resolver a fase. Em caso de sucesso, o jogador terá a opção de voltar ao menu principal ou jogar a mesma fase novamente, como visto na figura abaixo. Então o jogador poderá voltar ao menu principal e selecionar a próxima fase para jogar. Caso contrário, no lugar da imagem de sucesso, o jogo explicará o que aconteceu de errado na execução do algoritmo e permitirá que o jogador jogue a fase de novo.
-\begin{figure}[htbp]
-\centerline{\includegraphics[scale=0.275]{images/fig03.jpg}}
-\caption{Tela de sucesso da fase 5-1.}
-\label{fig}
-\end{figure}
 
 \section{Validação}
 
-A validação do trabalho se deu durante a pandemia do Covid-19, que foi um desafio por si só. Além da pandemia, nosso público-alvo são menores de idade, o que motivou a fazer a validação com professores de diferentes faixas etárias de modo a contemplar a impressão que o jogo pode causar em pessoas de fora da faixa etária pretendida. Desta forma, a validação se deu na forma de uma pesquisa qualitativa onde, através de mensagens eletrônicas por \textit{e-mail} ou \textit{facebook}, professores receberam o link para acessar o jogo, um questionário com uma explicação breve sobre pensamento computacional e cinco páginas com perguntas sobre o histórico do professor acerca do uso de jogos didáticos e a opinião sobre diferentes aspectos do jogo. 
+A validação do trabalho se deu durante a pandemia do Covid-19, que foi um desafio por si só. Além da pandemia, nosso público-alvo são menores de idade, o que motivou a fazer a validação com professores de diferentes faixas etárias de modo a contemplar a impressão que o jogo pode causar em pessoas de fora da faixa etária pretendida. Desta forma, a validação se deu na forma de uma pesquisa qualitativa onde, através de mensagens eletrônicas por \textit{e-mail} e \textit{facebook}, professores receberam o link para acessar o jogo, um questionário com uma explicação breve sobre pensamento computacional e cinco páginas com perguntas sobre o histórico do professor acerca do uso de jogos didáticos e a opinião sobre diferentes aspectos do jogo. As respostas do formulário foram depositadas em uma planilha para que uma análise qualitativa do conteúdo das respostas fosse conduzida pelos autores.
 
 No início da busca por professores voluntários, o foco se restringiu a professores de matemática ou informática, tendo em vista a proximidade dos conteúdos. Contudo, de modo a contemplar pontos de vista de pessoas de fora da área e desta forma fazer de Léo \& Maya mais acessível para indivíduos sem conhecimento prévio sobre pensamento computacional, esse escopo foi expandido para professores de todas as matérias. Ao final da pesquisa, onze voluntários foram contemplados. Destes onze, três deles dão aula para a faixa etária alvo do jogo, enquanto que os outros oito dão aula para alunos mais velhos ou mais novos; e sete deles dão aula de matemática e/ou computação. Um dos professores entrevistados leciona especificamente a matéria "pensamento computacional" para alunos de cinco a sete anos.
 
-A recepção por parte dos voluntários foi positiva. Nenhum voluntário expressou ter desgostado completamente do jogo, apesar de comentários de professores com alunos na idade de ensino médio questionarem a validez do jogo na hora de ensinar algo aos seus alunos, ou se o jogo não seria visto como infantil demais. Um professor específico de ensino médio apontou a falta de um enredo com personagens desenvolvidos como uma falha, uma vez que isso comprometeria o engajamento emocional de jogadores mais velhos. Outros problemas que professores tiveram de modo geral, independente da faixa etária ou matérias, foram com os tutoriais e a falta de \textit{feedback} audiovisual em tempo real ao bater em paredes, o que tornava a mensagem de erro que aparecia confusa, De modo geral, o retorno foi positivo, ainda assim.
+As respostas adquiridas mostrou que, na opinião do público entrevistado, o jogo Léo \& Maya é apropriado tanto como atividade didática quanto lúdica para crianças em idades entre cinco e catorze anos, indo além da faixa etária pretendida. Professores voluntários com alunos na faixa etária de quinze a dezessete anos, contudo, se dividem sobre a adequação do jogo para seus alunos. Para professores com alunos em faixas etárias abaixo dos cinco anos ou acima dos dezoito anos, contudo, o jogo se mostrou inadequado, de acordo com as respostas coletadas.
+
+De acordo com os professores voluntários, o jogo também faz um trabalho em ajudar no ensino de pilares específicos de pensamento computacional, em sua maioria sendo os pilares conhecidos como abstração e concepção de algoritmos. Por mais que os voluntários não sejam necessariamente familiarizados com o conceito de pensamento computacional, o professor que leciona a matéria de ''pensamento computacional'' corroborou com a opinião expressada pela maioria. Esta informação foi adquirida através do uso de uma Escala de Likert, que tem uma tendência a direcionar as opiniões dos voluntários rumo a um resultado positivo\cite{b24}.
+
+Os professor voluntários também responderam como que o jogo Léo \& Maya pode contribuir para o aprendizado dos alunos. A maioria dos professores apontaram para um estímulo do raciocínio lógico para resolução de problemas. Um voluntário em específico apontou também para um fator social envolvendo o jogo, de modo que o jogo poderia estimular a troca de informações entre jogadores e construir um senso de colaboração entre jovens em idade escolar.
+
+A recepção por parte dos voluntários foi positiva, uma vez que nenhum professor voluntário reportou ter desgostado do jogo por completo. Um professor específico de ensino médio apontou a falta de um enredo com personagens desenvolvidos como uma falha, uma vez que isso comprometeria o engajamento emocional de jogadores mais velhos. Outros problemas que professores tiveram de modo geral, independente da faixa etária ou matérias, foram com os tutoriais e a falta de \textit{feedback} audiovisual em tempo real ao bater em paredes, o que tornava a mensagem de erro que aparecia confusa.
 
 \section{Conclusão e Trabalhos Futuros}
 
@@ -137,7 +163,7 @@ Para o futuro próximo, existe o objetivo de retrabalhar os tutoriais de modo qu
 %acknowledgments in the unnumbered footnote on the first page.
 
 
-\begin{thebibliography}{23}
+\begin{thebibliography}{24}
 \bibitem{b1} V. Barr e C. Stephenson, ``Bringing computational thinking to K-12: what is Involved and what is the role of the computer science education community?'', ACM Inroads, vol. 2, nº 1, Art. nº 1, fev. 2011, doi: 10.1145/1929887.1929905.
 \bibitem{b2} J. M. Wing, ``Computational Thinking'', Communications of the ACM, vol. 49, nº 3, Art. nº 3, mar. 2006.
 \bibitem{b3} C. P. Brackmann, ``Desenvolvimento do Pensamento Computacional Através de Atividades Desplugadas na Educação Básica'', Doutorado, Universidade Federal do Rio Grande do Sul, Porto Alegre, 2017.
@@ -157,10 +183,11 @@ Para o futuro próximo, existe o objetivo de retrabalhar os tutoriais de modo qu
 \bibitem{b17} ``Produtos com marcador ‘Programação’''. https://store.steampowered.com/tags/pt-br/Programa\%C3\%A7\%C3\%A3o/ (acessado abr. 17, 2021).
 \bibitem{b18} ``Human Resource Machine – Apps no Google Play''. https://play.google.com/store/apps/details?id=com.tomorrowcorporation.\linebreak humanresourcemachine\&hl=pt\&gl=BR (acessado abr. 17, 2021).
 \bibitem{b19} B. B. Taucei, ``Endo-GDC: Desenvolvimento de um Game Design Canvas para Jogos Sérios Endógenos'', p. 105.
-\bibitem{b20} U. Technologies, ``Unity Real-Time Development Platform | 3D, 2D VR \& AR Engine''. https://unity.com/ (acessado abr. 17, 2021).
-\bibitem{b21} B. Wagner, ``Documentação do C\# – introdução, tutoriais, referência.'' https://docs.microsoft.com/pt-br/dotnet/csharp/ (acessado abr. 17, 2021).
-\bibitem{b22} ``Aseprite - Animated sprite editor \& pixel art tool''. https://www.aseprite.org/ (acessado abr. 17, 2021).
-\bibitem{b23} ``National curriculum in England: computing programmes of study'', GOV.UK. https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study (acessado abr. 17, 2021).
+\bibitem{b20} ``National curriculum in England: computing programmes of study'', GOV.UK. https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study (acessado abr. 17, 2021).
+\bibitem{b21} U. Technologies, ``Unity Real-Time Development Platform | 3D, 2D VR \& AR Engine''. https://unity.com/ (acessado abr. 17, 2021).
+\bibitem{b22} B. Wagner, ``Documentação do C\# – introdução, tutoriais, referência.'' https://docs.microsoft.com/pt-br/dotnet/csharp/ (acessado abr. 17, 2021).
+\bibitem{b23} ``Aseprite - Animated sprite editor \& pixel art tool''. https://www.aseprite.org/ (acessado abr. 17, 2021).
+\bibitem{b24}D. Bertram, ``Likert Scales'', p. 11, 2016.
 
 \end{thebibliography}
 
