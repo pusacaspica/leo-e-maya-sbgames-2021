@@ -11,14 +11,14 @@
 \usepackage[show]{ed}
 \usepackage{tabularx}
 
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
 %comandos para o meu comentário
 \newcommand{\xexeo}[1]{\ednote{\textcolor{red}{Xexéo - #1}}}
 \newcommand{\carla}[1]{\ednote{\textcolor{purple}{Carla - #1}}}
 \newcommand{\julio}[1]{\ednote{\textcolor{blue}{Júlio - #1}}}
 \newcommand{\horacio}[1]{\ednote{\textcolor{navy}{Horácio - #1}}}
-
-\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
-    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
     
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
     
@@ -27,8 +27,8 @@
 \title{Léo \& Maya: um jogo para auxiliar no ensino de pensamento computacional
 }
 
-\input{anonimo}
-%\input{autores}
+%\input{anonimo}
+\input{autores}
 
 \maketitle
 
@@ -44,46 +44,46 @@ Pensamento Computacional, Pensamento Computacional Paralelo, Jogos Educativos.
 
 \section{Introdução}
 
-Pensamento Computacional (PC) é um assunto que tem ganhado cada vez mais relevância ao longo dos últimos anos em discussões sobre educação infantil \cite{b1}. Citado pela primeira vez por Jeanette Wing em 2006, PC foi vagamente definido como ``resolução de problemas, idealização de sistemas e compreensão do comportamento humano através de conceitos fundamentais à Ciência da Computação''\cite{b2} e, desde então, se constitui em objeto de discussão no meio acadêmico, da definição até a aplicabilidade em salas de aula.
+Pensamento Computacional (PC) é um assunto que tem ganhado cada vez mais relevância ao longo dos últimos anos em discussões sobre educação infantil \cite{barr_bringing_2011}. Citado pela primeira vez por Jeanette Wing em 2006, PC foi vagamente definido como ``resolução de problemas, idealização de sistemas e compreensão do comportamento humano através de conceitos fundamentais à Ciência da Computação''\cite{wing_computational_2006} e, desde então, se constitui em objeto de discussão no meio acadêmico, da definição até a aplicabilidade em salas de aula.
 
-Hoje em dia, compreende-se que PC seja um conjunto de habilidades necessárias, comumente divididas em quatro pilares: abstração, decomposição em subproblemas, reconhecimento de padrões e criação de algoritmos\cite{b3}. Essas habilidades seriam úteis não só para um programador que precisa escrever códigos com algum objetivo prático, mas para qualquer pessoa que precise resolver um problema.
+Hoje em dia, compreende-se que PC seja um conjunto de habilidades necessárias, comumente divididas em quatro pilares: abstração, decomposição em subproblemas, reconhecimento de padrões e criação de algoritmos\cite{brackmann_desenvolvimento_2017}. Essas habilidades seriam úteis não só para um programador que precisa escrever códigos com algum objetivo prático, mas para qualquer pessoa que precise resolver um problema.
 
-Cada vez mais currículos de ensino médio e ensino fundamental estão agregando conteúdos de PC. Por exemplo, o plano de currículo K-12, dos Estados Unidos tem ``flertado'' com conceitos de PC desde 2011\cite{b1}, vindo a cada vez mais empregar esforços ao longo de anos para agregar conteúdos de PC no currículo de crianças e adolescentes. Já no Brasil, a Base Nacional Comum Curricular (BNCC) aprovada em dezembro de 2017 menciona explicitamente, na seção de Ensino Matemático, aplicações de álgebra no desenvolvimento de PC através do uso de algoritmos como estratégia para resolver problemas matemáticos\cite{b4}.
+Cada vez mais currículos de ensino médio e ensino fundamental estão agregando conteúdos de PC. Por exemplo, o plano de currículo K-12, dos Estados Unidos tem ``flertado'' com conceitos de PC desde 2011\cite{barr_bringing_2011}, vindo a cada vez mais empregar esforços ao longo de anos para agregar conteúdos de PC no currículo de crianças e adolescentes. Já no Brasil, a Base Nacional Comum Curricular (BNCC) aprovada em dezembro de 2017 menciona explicitamente, na seção de Ensino Matemático, aplicações de álgebra no desenvolvimento de PC através do uso de algoritmos como estratégia para resolver problemas matemáticos\cite{ministerio_da_educacao_base_2018}.
 
-Currículos escolares normalmente não abordam o assunto de Pensamento Computacional Paralelo (PC-Paralelo). Por mais que tenha sido mencionado por Wing em 2006 em seu primeiro artigo seminal sobre o assunto, e mais uma vez investigado em maior detalhe por Kirkpatrick no artigo "Parallel Computer Thinking" em 2017, PC-Paralelo é tido como um assunto que pode ser complexo demais para um aluno ter tempo de aprender em sala de aula, apesar de sua importância\cite{b5}.
+Currículos escolares normalmente não abordam o assunto de Pensamento Computacional Paralelo (PC-Paralelo). Por mais que tenha sido mencionado por Wing em 2006 em seu primeiro artigo seminal sobre o assunto, e mais uma vez investigado em maior detalhe por Kirkpatrick no artigo "Parallel Computer Thinking" em 2017, PC-Paralelo é tido como um assunto que pode ser complexo demais para um aluno ter tempo de aprender em sala de aula, apesar de sua importância\cite{kirkpatrick_parallel_2017}.
 
-De modo a auxiliar o ensino de PC para jogadores em idade escolar e tentar cobrir essa lacuna,  foi desenvolvido o jogo educativo endógeno Léo e Maya.  O objetivo é ensinar, através de uma abordagem lúdica, como fazer uso de PC para a resolução de problemas que admitem soluções algorítmicas, contemplando também o ensino de PC-Paralelo. Os ensinamentos serão passados através de várias fases onde os jogadores montarão algoritmos que serão seguidos pelos personagens do jogo — o gato Léo e a cachorra Maya — de modo a solucionar o problema proposto pela fase.
+De modo a auxiliar o ensino de PC para jogadores em idade escolar e tentar cobrir essa lacuna,  foi desenvolvido o jogo educativo endógeno Léo \& Maya.  O objetivo é ensinar, através de uma abordagem lúdica, como fazer uso de PC para a resolução de problemas que admitem soluções algorítmicas, contemplando também o ensino de PC-Paralelo. Os ensinamentos serão passados através de várias fases onde os jogadores montarão algoritmos que serão seguidos pelos personagens do jogo — o gato Léo e a cachorra Maya — de modo a solucionar o problema proposto pela fase.
 
 \section{Fundamentação Teórica}
 
 \subsection{Pensamento Computacional e Pensamento Computacional Paralelo}
 
-PC é mais do que meramente saber pensar para programar. PC envolve resolver subproblemas, desenhar sistemas e compreender comportamento humano ao se utilizar de conceitos fundamentais à Ciência da Computação\cite{b2}. É uma síntese de formas de pensar que são normalmente divididas em quatro pilares fundamentais: a decomposição de problemas, o reconhecimento de padrões, a abstração de informações e a formulação de algoritmos\cite{b6}.
+PC é mais do que meramente saber pensar para programar. PC envolve resolver subproblemas, desenhar sistemas e compreender comportamento humano ao se utilizar de conceitos fundamentais à Ciência da Computação\cite{wing_computational_2006}. É uma síntese de formas de pensar que são normalmente divididas em quatro pilares fundamentais: a decomposição de problemas, o reconhecimento de padrões, a abstração de informações e a formulação de algoritmos\cite{BBC}.
 
- Essa forma de pensamento e resolução não é útil somente ao programador, mas também para qualquer pessoa. PC influencia outros campos de estudo, como ``Medicina Algorítmica, Arqueologia Computacional, Economia Computacional, Finanças Computacionais, Computação e Jornalismo, Direito Computacional, Ciências Sociais Computacionais e Humanidades Digitais\cite{b7}''. E mesmo fora destes campos de estudo, PC é útil uma vez que dá às pessoas a capacidade de adaptar soluções algorítmicas, avaliar quando um computador é melhor indicado para lidar com um problema e aplicar estratégias como divisão e conquista na resolução de problemas na vida cotidiana\cite{b7}.
+ Essa forma de pensamento e resolução não é útil somente ao programador, mas também para qualquer pessoa. PC influencia outros campos de estudo, como ``Medicina Algorítmica, Arqueologia Computacional, Economia Computacional, Finanças Computacionais, Computação e Jornalismo, Direito Computacional, Ciências Sociais Computacionais e Humanidades Digitais''\cite{wing_computational_2010}. E mesmo fora destes campos de estudo, PC é útil uma vez que dá às pessoas a capacidade de adaptar soluções algorítmicas, avaliar quando um computador é melhor indicado para lidar com um problema e aplicar estratégias como divisão e conquista na resolução de problemas na vida cotidiana\cite{wing_computational_2010}.
 
-PC é uma habilidade comumente relacionada com currículos de Computação\cite{b8} ou Matemática, uma vez que os alunos precisam ``ser capazes de traduzir uma situação dada em outras linguagens, como transformar situações-problema, apresentadas em língua materna, em fórmulas, tabelas e gráficos, e vice-versa''\cite{b4} para a aprendizagem de Álgebra e outros campos da Matemática. 
+PC é uma habilidade comumente relacionada com currículos de Computação\cite{tch060} ou Matemática, uma vez que os alunos precisam ``ser capazes de traduzir uma situação dada em outras linguagens, como transformar situações-problema, apresentadas em língua materna, em fórmulas, tabelas e gráficos, e vice-versa''\cite{ministerio_da_educacao_base_2018} para a aprendizagem de Álgebra e outros campos da Matemática. 
 
-A discussão sobre o ensino de PC não é atual, tendo em vista que ações para o Ensino de Computação a crianças, como, por exemplo, o uso de LOGO ou de Basic para fins didáticos, são discutidas desde os anos 80\cite{b9}. A discussão foi renovada quando, em 2006, Wing definiu em seu artigo ``Computational Thinking'' o que é PC, e estabeleceu a importância dessa prática. Desde então, trabalhos têm sido produzidos de modo a explorar formas de integrar o ensino de PC em turmas de ensino fundamental e médio\cite{b1}\cite{b10}\cite{b11}\cite{b12}.
+A discussão sobre o ensino de PC não é atual, tendo em vista que ações para o Ensino de Computação a crianças, como, por exemplo, o uso de LOGO ou de Basic para fins didáticos, são discutidas desde os anos 80\cite{grover_computational_2013}. A discussão foi renovada quando, em 2006, Wing definiu em seu artigo ``Computational Thinking'' o que é PC, e estabeleceu a importância dessa prática. Desde então, trabalhos têm sido produzidos de modo a explorar formas de integrar o ensino de PC em turmas de ensino fundamental e médio\cite{wing_computational_2006}\cite{de_franca_disseminacao_2014}\cite{repenning_computational_2016}\cite{monclar_jogos_nodate}.
 
-Contudo, já em 2021, as pessoas têm amplo acesso a computadores, \textit{smartphones} e \textit{tablets} com multiprocessadores, que permitem a todo tipo de aplicação executar tarefas em paralelo, algo que não era comum até aproximadamente uma década atrás, quando a Computação Paralela se tornou convencional. Portanto, é importante que se contemple também o ensino de PC-Paralelo, que traz consigo muitas vantagens\cite{b5}.
+Contudo, já em 2021, as pessoas têm amplo acesso a computadores, \textit{smartphones} e \textit{tablets} com multiprocessadores, que permitem a todo tipo de aplicação executar tarefas em paralelo, algo que não era comum até aproximadamente uma década atrás, quando a Computação Paralela se tornou convencional. Portanto, é importante que se contemple também o ensino de PC-Paralelo, que traz consigo muitas vantagens\cite{BBC}.
 
-Um dos benefícios da Computação Paralela é ajudar ``a desenvolver uma abordagem mais flexível para solucionar problemas, porque há mais modelos nos quais se basear.''\cite{b5} Além disso, o paralelismo oferece mais formas de quebrar um problema grande em subproblemas menores, algo que pode acrescentar às vantagens de se aprender o PC, considerando que a decomposição de problemas é um de seus pilares fundamentais\cite{b5}.
+Um dos benefícios da Computação Paralela é ajudar ``a desenvolver uma abordagem mais flexível para solucionar problemas, porque há mais modelos nos quais se basear.''\cite{BBC} Além disso, o paralelismo oferece mais formas de quebrar um problema grande em subproblemas menores, algo que pode acrescentar às vantagens de se aprender o PC, considerando que a decomposição de problemas é um de seus pilares fundamentais\cite{BBC}.
 
 \subsection{Jogos Educativos Endógenos}
 
-Quando se discutem jogos educativos, é importante levar em conta como o conteúdo pedagógico a ser ensinado para o jogador está integrado no jogo, uma vez que o sucesso do jogo como atividade didática depende do quão intrínsecos são os conteúdos abordados dentro da fantasia oferecida pelo jogo \cite{b13}. Nisso, podemos aqui ver a divisão de jogos educativos em duas categorias: os jogos educativos sendo exógenos ou endógenos\cite{b14}.
+Quando se discutem jogos educativos, é importante levar em conta como o conteúdo pedagógico a ser ensinado para o jogador está integrado no jogo, uma vez que o sucesso do jogo como atividade didática depende do quão intrínsecos são os conteúdos abordados dentro da fantasia oferecida pelo jogo \cite{habgood_endogenous_2005}. Nisso, podemos aqui ver a divisão de jogos educativos em duas categorias: os jogos educativos sendo exógenos ou endógenos\cite{halverson_what_nodate}.
 
-O jogo educativo exógeno é, por natureza, mais fácil de ser feito e executado, por isso tem tido maior adoção por professores.\cite{b14} A característica mais marcante desse tipo de jogo educativo é a ausência de ligação entre as regras e o conteúdo que se quer ensinar.  Um exemplo desse tipo de jogo seriam perguntas-e-respostas, onde as regras do jogo independem do conteúdo das perguntas e meramente coexistem com o conteúdo.
+O jogo educativo exógeno é, por natureza, mais fácil de ser feito e executado, por isso tem tido maior adoção por professores.\cite{halverson_what_nodate} A característica mais marcante desse tipo de jogo educativo é a ausência de ligação entre as regras e o conteúdo que se quer ensinar.  Um exemplo desse tipo de jogo seriam perguntas-e-respostas, onde as regras do jogo independem do conteúdo das perguntas e meramente coexistem com o conteúdo.
 
-Por outro lado, o jogo educativo endógeno possui necessariamente uma ligação entre o \textit{game design} e o conteúdo a ser passado. Sua maior característica é fazer com que o domínio do jogo venha agregado ao domínio do próprio conteúdo. Exemplos conhecidos são os jogos de estratégia históricos, como as séries Civilization e Rise of Nations\cite{b14}.
+Por outro lado, o jogo educativo endógeno possui necessariamente uma ligação entre o \textit{game design} e o conteúdo a ser passado. Sua maior característica é fazer com que o domínio do jogo venha agregado ao domínio do próprio conteúdo. Exemplos conhecidos são os jogos de estratégia históricos, como as séries Civilization e Rise of Nations\cite{halverson_what_nodate}.
 
-Jogos educativos endógenos são presentes em lojas virtuais de jogos eletrônicos, abordando vários temas. Um desses temas é a programação de soluções na forma de algoritmos em ambientes simulados\cite{b15}\cite{b16}\cite{b17}. A existência de outros jogos que abordam conteúdos similares a Léo \& Maya é excelente, uma vez que prova a existência de um mercado para esse tipo de jogo e informa uma coleção de convenções e ideias sobre as quais o nosso jogo pode construir.
+Jogos educativos endógenos são presentes em lojas virtuais de jogos eletrônicos, abordando vários temas. Um desses temas é a programação de soluções na forma de algoritmos em ambientes simulados\cite{googleplay}\cite{gogcom}\cite{steam_tag_programming}. A existência de outros jogos que abordam conteúdos similares a Léo \& Maya é excelente, uma vez que prova a existência de um mercado para esse tipo de jogo e informa uma coleção de convenções e ideias sobre as quais o nosso jogo pode construir.
 
-Léo \& Maya tira grande inspiração de Human Resource Machine\cite{b18}, uma vez que ambos são jogos que podem ser jogados em celulares e computadores, e se baseiam em fazer o jogador programar algoritmos para resolver problemas  divididos em fases. Contudo, Léo \& Maya se diferencia da maioria abordando paralelismo desde as primeiras fases e algoritmos através de uma sintaxe simplificada.
+Léo \& Maya tira grande inspiração de Human Resource Machine\cite{humanresourcemachine}, uma vez que ambos são jogos que podem ser jogados em celulares e computadores, e se baseiam em fazer o jogador programar algoritmos para resolver problemas  divididos em fases. Contudo, Léo \& Maya se diferencia da maioria abordando paralelismo desde as primeiras fases e algoritmos através de uma sintaxe simplificada.
 
 \section{Projeto do Jogo Educativo}
-Antes do desenvolvimento do jogo, criou-se um \textit{game design canvas} baseado no Game Design Canvas para jogos endógenos (Endo-GDC) de modo a ``facilitar a discussão e descrição de um jogo sério''\cite{b19}. O canvas é útil para unificar a linguagem usada por todas as partes envolvidas na produção do \textit{game} e descrever de forma explícita e legível a relação entre o conteúdo que se quer passar, os objetivos pedagógicos que querem ser atingidos através do conteúdo e as mecânicas do jogo que deverão ter ligação direta com os objetivos. Todo o conteúdo desse canvas foi, num momento posterior, traduzido em um documento de\textit{game design}. 
+Antes do desenvolvimento do jogo, criou-se um \textit{game design canvas} baseado no Game Design Canvas para jogos endógenos (Endo-GDC) de modo a ``facilitar a discussão e descrição de um jogo sério''\cite{taucei_endo-gdc_nodate}. O canvas é útil para unificar a linguagem usada por todas as partes envolvidas na produção do \textit{game} e descrever de forma explícita e legível a relação entre o conteúdo que se quer passar, os objetivos pedagógicos que querem ser atingidos através do conteúdo e as mecânicas do jogo que deverão ter ligação direta com os objetivos. Todo o conteúdo desse canvas foi, num momento posterior, traduzido em um documento de \textit{game design}. 
 
 A relação entre objetivos pedagógicos e mecânicas é resumida na tabela 1, onde cada linha da tabela corresponde a uma mecânica do jogo e cada coluna corresponde a um objetivo pedagógico. Cada célula da tabela marcada com um ``X'' representa a relação entre uma mecânica e um objetivo pedagógico específicos, podendo assim uma mecânica ter relação com mais de um objetivo pedagógico ao mesmo tempo.
 
@@ -116,9 +116,9 @@ A relação entre objetivos pedagógicos e mecânicas é resumida na tabela 1, o
 \end{center}
 \end{table}
 
-O conteúdo pedagógico que o jogo aborda está alinhado com currículos de cursos de programação ao redor do mundo\cite{b8}\cite{b20}, introduzindo conteúdos pontuais desses mesmos currículos na ordem em que eles aparecem nos planos de aulas. A diferença é a introdução de paralelismo por parte do jogo, conteúdo que não aparece em nenhum dos currículos consultados. Através dos conteúdos pedagógicos, o jogo visa exercitar a construção de algoritmos e a divisão de problemas complexos em subproblemas simples de solução conhecida, dois dos quatro pilares fundamentais de PC\cite{b6}.
+O conteúdo pedagógico que o jogo aborda está alinhado com currículos de cursos de programação ao redor do mundo\cite{tch060}\cite{govuk}, introduzindo conteúdos pontuais desses mesmos currículos na ordem em que eles aparecem nos planos de aulas. A diferença é a introdução de paralelismo por parte do jogo, conteúdo que não aparece em nenhum dos currículos consultados. Através dos conteúdos pedagógicos, o jogo visa exercitar a construção de algoritmos e a divisão de problemas complexos em subproblemas simples de solução conhecida, dois dos quatro pilares fundamentais de PC\cite{BBC}.
 
-No que diz respeito aos aspectos técnicos, utilizou-se a \textit{Unity}\cite{b21} para construir o jogo. A \textit{Unity} é um motor de jogos gratuito estabelecido no mercado que permite a criação de aplicações com recursos gráficos tanto em 2D quanto 3D, e que possui um foco no mercado de desenvolvimento de jogos eletrônicos. Atualmente, a Unity utiliza C\#\cite{b22} como a linguagem para escrever \textit{scripts} dentro dos projetos, e permite a exportação dos seus projetos para, dentre outras plataformas, computadores pessoais e celulares \textit{Android}. Além disso, toda a arte do jogo foi produzida usando o aplicativo pago \textit{Aseprite}\cite{b23}.
+No que diz respeito aos aspectos técnicos, utilizou-se a \textit{Unity}\cite{unity} para construir o jogo. A \textit{Unity} é um motor de jogos gratuito estabelecido no mercado que permite a criação de aplicações com recursos gráficos tanto em 2D quanto 3D, e que possui um foco no mercado de desenvolvimento de jogos eletrônicos. Atualmente, a Unity utiliza C\#\cite{wagner_documentacao_nodate} como a linguagem para escrever \textit{scripts} dentro dos projetos, e permite a exportação dos seus projetos para, dentre outras plataformas, computadores pessoais e celulares \textit{Android}. Além disso, toda a arte do jogo foi produzida usando o aplicativo pago \textit{Aseprite}\cite{aseprite}.
 
 O jogo possui um total de vinte e duas fases divididas em seis seções que introduzem mecânicas e conteúdos diferentes. As fases do jogo funcionam todas praticamente da mesma forma, de modo a manter a consistência na interação do jogador com as mecânicas do jogo e não exigir que o jogador reaprenda a jogar a cada fase. Caso a fase seja a primeira de alguma seção e o jogador estiver jogando a fase pela primeira vez, um vídeo demonstra através de um exemplo a mecânica nova que o conjunto de fases introduz.
 
@@ -152,40 +152,7 @@ PC é uma habilidade cada vez mais relevante tanto em currículos escolares quan
 
 Para o futuro próximo, existe o objetivo de retrabalhar os tutoriais de modo que eles sejam mais acessíveis a um número maior de pessoas na hora de ensinar como jogar o jogo. Também existe a ambição de colocar artifícios de comunidade, como uma forma de criar fases customizáveis e de compartilhar estas mesmas fases e \textit{leaderboards} para estimular competitividade entre jogadores e aperfeiçoamento na hora de montar algoritmos, e implementar uma quantidade maior de arte de modo a fazer o jogo mais sensorialmente agradável de se jogar.
 
-
-%\section*{Agradecimentos}
-%
-%The preferred spelling of the word ``acknowledgment'' in America is without 
-%an ``e'' after the ``g''. Avoid the stilted expression ``one of us (R. B. 
-%G.) thanks $\ldots$''. Instead, try ``R. B. G. thanks$\ldots$''. Put sponsor 
-%acknowledgments in the unnumbered footnote on the first page.
-
-
-\begin{thebibliography}{23}
-\bibitem{b1} V. Barr e C. Stephenson, ``Bringing computational thinking to K-12: what is Involved and what is the role of the computer science education community?'', ACM Inroads, vol. 2, nº 1, Art. nº 1, fev. 2011, doi: 10.1145/1929887.1929905.
-\bibitem{b2} J. M. Wing, ``Computational Thinking'', Communications of the ACM, vol. 49, nº 3, Art. nº 3, mar. 2006.
-\bibitem{b3} C. P. Brackmann, ``Desenvolvimento do Pensamento Computacional Através de Atividades Desplugadas na Educação Básica'', Doutorado, Universidade Federal do Rio Grande do Sul, Porto Alegre, 2017.
-\bibitem{b4} M. Filho, ``MINISTRO DE ESTADO DA EDUCAÇÃO'', p. 472.
-\bibitem{b5} K. Kirkpatrick, ``Parallel computational thinking'', Commun. ACM, vol. 60, nº 12, Art. nº 12, nov. 2017, doi: 10.1145/3148760.
-\bibitem{b6} ``What is computational thinking? - Introduction to computational thinking - KS3 Computer Science Revision'', BBC Bitesize. https://www.bbc.co.uk/bitesize/guides/zp92mp3/revision/1 (acessado abr. 17, 2021).
-\bibitem{b7} J. M. Wing, ``Computational Thinking: What and Why?'', Link Magazine, p. 1–6, nov. 2010.
-\bibitem{b8} ``TCH060: C++ Programming''. https://www.k12.com/high-school-course-list/cplusplus-programming-elective-tch060.html (acessado jun. 23, 2020).
-\bibitem{b9} S. Grover e R. Pea, ``Computational Thinking in K–12: A Review of the State of the Field'', Educational Researcher, vol. 42, nº 1, Art. nº 1, jan. 2013, doi: 10.3102/0013189X12463051.
-\bibitem{b10} R. S. de França, Ferreira Victor Afonso dos Santos Ferreira, L. C. F. de Almeida, e H. J. C. do Amaral, ``A disseminação do pensamento computacional na educação básica: lições aprendidas com experiências de licenciandos em computação'', p. 10, 2014.
-\bibitem{b11} A. Repenning, A. Basawapatna, e N. Escherle, ``Computational thinking tools'', in 2016 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC), Cambridge, United Kingdom, set. 2016, p. 218–222, doi: 10.1109/VLHCC.2016.7739688.
-\bibitem{b12} R. Monclar, ``Jogos com Propósito para o Ensino de Programação'', p. 9.
-\bibitem{b13} M. P. J. Habgood, S. E. Ainsworth, e S. Benford, ``Endogenous fantasy and learning in digital games'', Simulation \& Gaming, vol. 36, nº 4, p. 483–498, dez. 2005, doi:10.1177/1046878105282276.
-\bibitem{b14} R. Halverson, ``What Can K-12 School Leaders Learn from Video Games and Gaming?'', p. 8.
-\bibitem{b15} ``Google Play''. https://play.google.com/store/apps/category/\linebreak GAME\_PUZZLE (acessado abr. 17, 2021).
-\bibitem{b16} ``GOG.com'', GOG.com. www.gog.com (acessado abr. 17, 2021).
-\bibitem{b17} ``Produtos com marcador ‘Programação’''. https://store.steampowered.com/tags/pt-br/Programa\%C3\%A7\%C3\%A3o/ (acessado abr. 17, 2021).
-\bibitem{b18} ``Human Resource Machine – Apps no Google Play''. https://play.google.com/store/apps/details?id=com.tomorrowcorporation.\linebreak humanresourcemachine\&hl=pt\&gl=BR (acessado abr. 17, 2021).
-\bibitem{b19} B. B. Taucei, ``Endo-GDC: Desenvolvimento de um Game Design Canvas para Jogos Sérios Endógenos'', p. 105.
-\bibitem{b20} ``National curriculum in England: computing programmes of study'', GOV.UK. https://www.gov.uk/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study (acessado abr. 17, 2021).
-\bibitem{b21} U. Technologies, ``Unity Real-Time Development Platform | 3D, 2D VR \& AR Engine''. https://unity.com/ (acessado abr. 17, 2021).
-\bibitem{b22} B. Wagner, ``Documentação do C\# – introdução, tutoriais, referência.'' https://docs.microsoft.com/pt-br/dotnet/csharp/ (acessado abr. 17, 2021).
-\bibitem{b23} ``Aseprite - Animated sprite editor \& pixel art tool''. https://www.aseprite.org/ (acessado abr. 17, 2021).
-
-\end{thebibliography}
+\bibliography{biblio.bib}
+\bibliographystyle{IEEEtran}
 
 \end{document}
