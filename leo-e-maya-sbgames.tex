@@ -24,7 +24,7 @@
     
 \begin{document}
 
-\title{Léo \& Maya: um jogo para auxiliar no ensino de pensamento computacional
+\title{Léo \& Maya: um jogo para auxiliar no ensino de pensamento computacional paralelo
 }
 
 %\input{anonimo}
@@ -58,9 +58,7 @@ De modo a auxiliar o ensino de PC para jogadores em idade escolar e tentar cobri
 
 \subsection{Pensamento Computacional e Pensamento Computacional Paralelo}
 
-PC é mais do que meramente saber pensar para programar. PC envolve resolver subproblemas, desenhar sistemas e compreender comportamento humano ao se utilizar de conceitos fundamentais à Ciência da Computação\cite{wing_computational_2006}. É uma síntese de formas de pensar que são normalmente divididas em quatro pilares fundamentais: a decomposição de problemas, o reconhecimento de padrões, a abstração de informações e a formulação de algoritmos\cite{BBC}.
-
- Essa forma de pensamento e resolução não é útil somente ao programador, mas também para qualquer pessoa. PC influencia outros campos de estudo, como ``Medicina Algorítmica, Arqueologia Computacional, Economia Computacional, Finanças Computacionais, Computação e Jornalismo, Direito Computacional, Ciências Sociais Computacionais e Humanidades Digitais''\cite{wing_computational_2010}. E mesmo fora destes campos de estudo, PC é útil uma vez que dá às pessoas a capacidade de adaptar soluções algorítmicas, avaliar quando um computador é melhor indicado para lidar com um problema e aplicar estratégias como divisão e conquista na resolução de problemas na vida cotidiana\cite{wing_computational_2010}.
+PC envolve resolver subproblemas, desenhar sistemas e compreender comportamento humano ao se utilizar de conceitos fundamentais à Ciência da Computação\cite{wing_computational_2006}. É uma forma de pensamento e resolução de problemas que influencia outros campos de estudo fora da computação, como ``Medicina Algorítmica, Arqueologia Computacional, Economia Computacional, Finanças Computacionais, Computação e Jornalismo, Direito Computacional, Ciências Sociais Computacionais e Humanidades Digitais''\cite{wing_computational_2010}. E mesmo fora destes campos de estudo, PC é útil uma vez que dá às pessoas a capacidade de adaptar soluções algorítmicas, avaliar quando um computador é melhor indicado para lidar com um problema e aplicar estratégias como divisão e conquista na resolução de problemas na vida cotidiana\cite{wing_computational_2010}.
 
 PC é uma habilidade comumente relacionada com currículos de Computação\cite{tch060} ou Matemática, uma vez que os alunos precisam ``ser capazes de traduzir uma situação dada em outras linguagens, como transformar situações-problema, apresentadas em língua materna, em fórmulas, tabelas e gráficos, e vice-versa''\cite{ministerio_da_educacao_base_2018} para a aprendizagem de Álgebra e outros campos da Matemática. 
 
@@ -71,7 +69,10 @@ Contudo, já em 2021, as pessoas têm amplo acesso a computadores, \textit{smart
 Um dos benefícios da Computação Paralela é ajudar ``a desenvolver uma abordagem mais flexível para solucionar problemas, porque há mais modelos nos quais se basear.''\cite{BBC} Além disso, o paralelismo oferece mais formas de quebrar um problema grande em subproblemas menores, algo que pode acrescentar às vantagens de se aprender o PC, considerando que a decomposição de problemas é um de seus pilares fundamentais\cite{BBC}.
 
 \subsection{Jogos Educativos Endógenos}
-
+  
+%definição de jogo do Jesper Juul + crianças se interessam por conhecimentos que lhe façam sentido de acordo com Piaget
+A definição de jogo é tema de discussão há décadas, sendo assim impossível declarar uma definição como definitiva. Por esse motivo, a definição adotada neste trabalho é a definição encontrada no livro \textit{Half-Real: Video Games between Real Rules and Fictional Worlds}, onde jogos são definidos em uma lista de seis tópicos que tem como sexto tópico "as consequências da atividade (de jogar) são opcionais e negociáveis"\cite{halfreal}. Esta definição nos é cômoda uma vez que admite que o ato de jogar pode ter consequências na vida real (no emprego do termo "negociável") para além de uma atividade lúdica ou social, podendo desta forma servir para educar o jogador sobre algum assunto. Esta definição também nos permite fazer uma ponte com a teoria construtivista de Jean Piaget, que defendia que o conhecimento se constrói através da exploração do objeto de estudo, e não de uma transmissão unilateral de conhecimento entre aluno e professor\cite{novaescola_piaget}. %Esta teoria pode ser vista refletida nos trabalhos de Seymour Papert e Paulo Freire, que visavam colocar o aluno como protagonista do próprio aprendizado\cite{soffner}.
+  
 Quando se discutem jogos educativos, é importante levar em conta como o conteúdo pedagógico a ser ensinado para o jogador está integrado no jogo, uma vez que o sucesso do jogo como atividade didática depende do quão intrínsecos são os conteúdos abordados dentro da fantasia oferecida pelo jogo \cite{habgood_endogenous_2005}. Nisso, podemos aqui ver a divisão de jogos educativos em duas categorias: os jogos educativos sendo exógenos ou endógenos\cite{halverson_what_nodate}.
 
 O jogo educativo exógeno é, por natureza, mais fácil de ser feito e executado, por isso tem tido maior adoção por professores.\cite{halverson_what_nodate} A característica mais marcante desse tipo de jogo educativo é a ausência de ligação entre as regras e o conteúdo que se quer ensinar.  Um exemplo desse tipo de jogo seriam perguntas-e-respostas, onde as regras do jogo independem do conteúdo das perguntas e meramente coexistem com o conteúdo.
@@ -83,38 +84,15 @@ Jogos educativos endógenos são presentes em lojas virtuais de jogos eletrônic
 Léo \& Maya tira grande inspiração de Human Resource Machine\cite{humanresourcemachine}, uma vez que ambos são jogos que podem ser jogados em celulares e computadores, e se baseiam em fazer o jogador programar algoritmos para resolver problemas  divididos em fases. Contudo, Léo \& Maya se diferencia da maioria abordando paralelismo desde as primeiras fases e algoritmos através de uma sintaxe simplificada.
 
 \section{Projeto do Jogo Educativo}
+
 Antes do desenvolvimento do jogo, criou-se um \textit{game design canvas} baseado no Game Design Canvas para jogos endógenos (Endo-GDC) de modo a ``facilitar a discussão e descrição de um jogo sério''\cite{taucei_endo-gdc_nodate}. O canvas é útil para unificar a linguagem usada por todas as partes envolvidas na produção do \textit{game} e descrever de forma explícita e legível a relação entre o conteúdo que se quer passar, os objetivos pedagógicos que querem ser atingidos através do conteúdo e as mecânicas do jogo que deverão ter ligação direta com os objetivos. Todo o conteúdo desse canvas foi, num momento posterior, traduzido em um documento de \textit{game design}. 
 
-A relação entre objetivos pedagógicos e mecânicas é resumida na tabela 1, onde cada linha da tabela corresponde a uma mecânica do jogo e cada coluna corresponde a um objetivo pedagógico. Cada célula da tabela marcada com um ``X'' representa a relação entre uma mecânica e um objetivo pedagógico específicos, podendo assim uma mecânica ter relação com mais de um objetivo pedagógico ao mesmo tempo.
+%Como o GDC foi usado: alunos de CC com experiência prévia em desenvolvimento de jogo
+O Endo-GDC foi usado neste trabalho por dois alunos de bacharelado de Ciência da Computação com experiência na produção de jogos eletrônicos. Os alunos contaram com a orientação de professores orientadores interessados no campo da educação e sua relação com computação no momento de adquirir os conhecimentos necessários para definir os campos do canvas fora da área de domínio. Para tal, os alunos e orientadores conduziram discussões sobre currículos escolares atuais, o mercado de jogos educativos com foco em ensino de PC e tópicos menos abordados por esses jogos comerciais. A partir destas discussões, houve o estudo de currículos para definir conteúdos \cite{govuk} \cite{tch060}, o uso da Taxonomia Revisada de Bloom para definir objetivos pedagógicos \cite{krathwohl} e um estudo de jogos similares como forma de identificar mecânicas que possam ser familiares para jogadores.
 
-\def\tabularycolumn#1{m{#1}}
-\begin{table}[htbp]
-\caption{Relação entre objetivos de aprendizado e mecânicas do jogo ``Léo \& Maya''}
-\begin{center}
-\begin{tabularx}{9cm}{|Y|Y|Y|Y|Y|}
-\hline
-\textbf{ }&\textbf{Reconhecer\linebreak subproble-\linebreak mas}&\textbf{Interpretar\linebreak objetivo}&\textbf{Analisar\linebreak limitações}&\textbf{Conceber\linebreak algoritmos} \\
-\hline
-\textbf{Trilha de instruções de tamanho finito} & & & & X  \\
-\hline
-\textbf{Andar pelo mapa} & & X & X & X \\
-\hline
-\textbf{Empurrar objetos} & & & X & X\\
-\hline
-\textbf{Pegar ou largar objetos} & & X & X & X\\
-\hline
-\textbf{Árvores} & & & X & X\\
-\hline
-\textbf{Laços de instruções} & X & & X & X\\
-\hline
-\textbf{Dois personagens jogáveis} & X & X & X & X\\
-\hline
-\textbf{Barreiras} & X & & X & X\\
-\hline
-\end{tabularx}
-\label{tab1}
-\end{center}
-\end{table}
+\input{table01}
+
+A relação entre objetivos pedagógicos e mecânicas é resumida na tabela 1, onde cada linha da tabela corresponde a uma mecânica do jogo e cada coluna corresponde a um objetivo pedagógico. Cada célula da tabela marcada com um ``X'' representa a relação entre uma mecânica e um objetivo pedagógico específicos, podendo assim uma mecânica ter relação com mais de um objetivo pedagógico ao mesmo tempo.
 
 O conteúdo pedagógico que o jogo aborda está alinhado com currículos de cursos de programação ao redor do mundo\cite{tch060}\cite{govuk}, introduzindo conteúdos pontuais desses mesmos currículos na ordem em que eles aparecem nos planos de aulas. A diferença é a introdução de paralelismo por parte do jogo, conteúdo que não aparece em nenhum dos currículos consultados. Através dos conteúdos pedagógicos, o jogo visa exercitar a construção de algoritmos e a divisão de problemas complexos em subproblemas simples de solução conhecida, dois dos quatro pilares fundamentais de PC\cite{BBC}.
 
